@@ -6,6 +6,17 @@ pipeline {
     label 'maven'
   }
 
+   stages {
+       stage('Hello') {
+           steps {
+               echo 'Hello World'
+           }
+       }
+       stage("Checkout") {
+           steps {
+               checkout scm
+           }
+       }
   stages {
     stage('Build') {
       steps {
